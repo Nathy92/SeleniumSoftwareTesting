@@ -24,15 +24,12 @@ public class TestBase {
 	 * Mail
 	 */
 	
-	
-	
+
 	public static WebDriver driver;
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
-	
-	
 	
 	
 	@BeforeSuite
@@ -68,9 +65,7 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-		
-		
+	
 		
 		if(config.getProperty("browser").equals("firefox"))
 		{
