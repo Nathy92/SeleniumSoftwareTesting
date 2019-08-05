@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -81,6 +82,15 @@ public class TestBase {
 		driver.get(config.getProperty("testsiteurl"));
 		log.debug("Navigated to:" + config.getProperty("testsiteurl") );
 		driver.manage().window().maximize();
+		
+		//Capture user DInformation
+		driver.findElement(By.id("name")).sendKeys("Nkosinathi Cedric");
+		driver.findElement(By.id("email")).sendKeys("examples@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("password@12345");
+		
+	    driver.findElement(By.id("terms")).click();
+	    driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div/div[2]/div[2]/div/form/div[6]/div/button")).click();
+		
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.waite")), TimeUnit.SECONDS);
 		
 		}

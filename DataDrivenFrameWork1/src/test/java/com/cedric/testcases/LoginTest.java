@@ -14,8 +14,13 @@ public class LoginTest extends TestBase {
   {
 	  log.debug("Inside Login Test");
 	 // driver.findElement(By.xpath("button[class*='btn btn-primary btn-lg']")).click();
-	  driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
-	  Assert.assertTrue(message, condition);
+	  //driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
+	  //driver.findElement(By.id(OR.getProperty("nameTxt"))).sendKeys("Nkosinathi Cedric Malala");
+	 // driver.findElement(By.id(OR.getProperty("emailTxt"))).sendKeys("example@gmail.com");
+	  driver.findElement(By.id("name")).sendKeys("Nkosinathi Cedric");
+	  
+	  
+	  //Assert.assertTrue(message, condition);
 	  
 	  log.debug("Login Test succesfull executed");
   }
